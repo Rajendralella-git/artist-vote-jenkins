@@ -91,28 +91,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>com.spotify</groupId>
-				<artifactId>dockerfile-maven-plugin</artifactId>
-				<version>1.4.0</version>
-				<configuration>
-					<repository>rajendralella/artist-vote-docker.jar</repository>
-					<tag>0.1</tag>
-					<buildArgs>
-						<JAR_FILE>target/artist-vote-docker.jar</JAR_FILE>
-					</buildArgs>
-				</configuration>
-				<executions>
-					<execution>
-						<id>default</id>
-						<phase>install</phase>
-						<goals>
-							<goal>build</goal>
-							<goal>push</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 		<finalName>artist-vote-docker</finalName>
 	</build>
